@@ -1,0 +1,17 @@
+                                                                                                                                                               document.getElementById('eventForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const eventName = document.getElementById('eventName').value;
+    const eventDate = document.getElementById('eventDate').value;
+    const eventTime = document.getElementById('eventTime').value;
+    const eventLocation = document.getElementById('eventLocation').value;
+    
+    const eventList = document.getElementById('eventList');
+    const listItem = document.createElement('li');
+    listItem.textContent = `${eventName} - ${eventDate} at ${eventTime} - Location: ${eventLocation}`;
+    
+    eventList.appendChild(listItem);
+    
+    // Clear the form fields
+    document.getElementById('eventForm').reset();
+    });
