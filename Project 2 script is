@@ -1,0 +1,44 @@
+                                                                                                                                                             document.getElementById('submit-post').addEventListener('click', function() {
+    const title = document.getElementById('post-title').value;
+    const content = document.getElementById('post-content').value;
+    
+    if (title && content) {
+    const postContainer = document.getElementById('posts-container');
+    const postDiv = document.createElement('div');
+    postDiv.classList.add('post');
+    
+    postDiv.innerHTML = `
+    <h3>${title}</h3>
+    <p>${content}</p>
+    <div class="comment-section">
+    <input type="text" placeholder="Add a comment..." class="comment-input">
+    <button class="submit-comment">Comment</button>
+    <div class="comments"></div>
+    </div>
+    `;
+    
+    postContainer.prepend(postDiv);
+    
+    // Clear input fields
+    document.getElementById('post-title').value = '';
+    document.getElementById('post-content').value = '';
+    
+    // Add comment functionality
+    const commentInput = postDiv.querySelector('.comment-input');
+    const submitCommentButton = postDiv.querySelector('.submit-comment');
+    const commentsDiv = postDiv.querySelector('.comments');
+    
+    submitCommentButton.addEventListener('click', function() {
+    const commentText = commentInput.value;
+    if (commentText) {
+    const commentDiv = document.createElement('div');
+    commentDiv.classList.add('comment');
+    commentDiv.textContent = commentText;
+    commentsDiv.appendChild(commentDiv);
+    commentInput.value = ''; // Clear input
+    }
+    });
+    } else {
+    alert('Please fill in both fields.');
+    }
+    });
