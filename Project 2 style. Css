@@ -1,0 +1,65 @@
+ body {                                                                                                                                      styles.css                                                                                                                                                                      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    }
+    
+    header {
+    background: #f10404;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    }
+    
+    main {
+    padding: 20px;
+    }
+    
+    h2 {
+    color: #35424a;
+    }
+    
+    #new-post {
+    margin-top: 20px;
+    }
+    
+    input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    }
+    
+    button:hover {
+    background: #45a049;
+    }
+    
+    .post {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    }
+    
+    .comment-section {
+    margin-top: 10px;
+    }
+    
+    .comment {
+    background: #f9f9f9;
+    border-left: 3px solid #35424a;
+    padding: 10px;
+    margin: 5px 0;
+    }                                                                                                                                                                                              script.js                                                                                                                                                               document.getElementById('submit-post').addEventListener('click', function() {
+    
